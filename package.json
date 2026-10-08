@@ -1,0 +1,39 @@
+{
+  "name": "fetchnow-email-to-draft-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "#541 供应商发票邮件 -> Xero 账单草稿（练手版：先跑通 mock Xero，再换真 Xero）",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "fixtures": "node scripts/make-fixtures.mjs",
+    "test": "node --import tsx --test test/*.test.ts",
+    "demo": "tsx src/cli.ts demo",
+    "scan": "tsx src/cli.ts scan",
+    "process": "tsx src/cli.ts process",
+    "watch": "tsx src/cli.ts watch",
+    "list": "tsx src/cli.ts list",
+    "show": "tsx src/cli.ts show",
+    "admit": "tsx src/cli.ts admit",
+    "retry": "tsx src/cli.ts retry",
+    "retest": "tsx src/cli.ts retest",
+    "reconcile": "tsx src/cli.ts reconcile",
+    "imap-check": "tsx src/cli.ts imap check",
+    "imap-state": "tsx src/cli.ts imap state",
+    "fake-xero": "node scripts/fake-xero.mjs"
+  },
+  "dependencies": {
+    "imapflow": "^2.2.1",
+    "mailparser": "^3.9.33",
+    "pdfjs-dist": "^4.10.38"
+  },
+  "devDependencies": {
+    "@types/mailparser": "^3.9.0",
+    "@types/node": "^22.13.1",
+    "tsx": "^4.23.0",
+    "typescript": "^5.7.3"
+  }
+}
